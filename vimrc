@@ -44,8 +44,6 @@ vnoremap <F1> <ESC>
 
 nnoremap ; :
 
-au FocusLost * :silent! wall
-au VimResized * :wincmd =
 
 
 nnoremap <leader>w <C-w>v<C-w>l
@@ -189,6 +187,7 @@ hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
 
 
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <leader>eg :vsplit $MYGVIMRC<CR>
 
 
 nnoremap q1 :q!<CR>
@@ -205,6 +204,7 @@ cnoremap Q! q!
 " Folding ----------------------------------------------------------------- {{{
 
 set foldlevelstart=0
+set foldcolumn=4
 
 " Space to toggle folds.
 nnoremap <Space> za
@@ -272,4 +272,6 @@ endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 " }}}
 
-set foldcolumn=4
+
+
+au VimResized * :wincmd =
