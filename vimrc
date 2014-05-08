@@ -34,6 +34,11 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
+" Pathogen From Tim Pope{
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+}
 nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
@@ -241,7 +246,7 @@ function! MyFoldText() " {{{
     return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
 endfunction " }}}
 set foldtext=MyFoldText()
-
+set foldmethod=marker foldmarker={,}
 " }}}
 
 
