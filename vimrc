@@ -38,7 +38,7 @@ set hlsearch
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-}
+"}
 nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
@@ -94,9 +94,9 @@ noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
 nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
 
 " Easier to type, and I never use the default behavior.
-noremap H ^
-noremap L $
-vnoremap L g
+"noremap H ^
+"noremap L $
+"vnoremap L g
 
 noremap <S-left> 0
 noremap <S-right> $
@@ -193,6 +193,10 @@ hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
 
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>eg :vsplit $MYGVIMRC<CR>
+nnoremap <leader>em :vsplit makefile<CR>
+nnoremap <leader>es :vsplit ~/.config/openbox/lubuntu-rc.xml<CR>
+
+
 
 
 nnoremap q1 :q!<CR>
